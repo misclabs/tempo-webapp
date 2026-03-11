@@ -2,7 +2,7 @@ import { PlayIcon, PauseIcon } from "@radix-ui/react-icons";
 import type { ReactElement } from "react";
 import { playClick } from "../sfx";
 import type { TimerState } from "./pomodoro";
-import TeButton, { type TeButtonProps } from "../ui/te-button";
+import TeButton from "../ui/te-button";
 
 export type PlayPauseButtonProps = {
   timerState: TimerState;
@@ -13,7 +13,7 @@ export function PlayPauseButton({
   timerState,
   setTimerState,
   ...rest
-}: PlayPauseButtonProps & TeButtonProps): ReactElement {
+}: PlayPauseButtonProps): ReactElement {
   function onClick(timerState: TimerState): void {
     playClick();
     setTimerState(timerState);

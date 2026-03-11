@@ -59,7 +59,7 @@ export function PomodoroTimer(): ReactElement {
           {formatDurationS(targetDurationS)}
         </p>
       </div>
-      <div>
+      <div className="space-x-2">
         {/* TODO(jw) flex justify="center" align="end" gap="5"> */}
         <PlayPauseButton
           timerState={timerState}
