@@ -9,18 +9,29 @@ A timer for focus and daily practice.
 Defaults are used for Prettier and ESLint (including plugins for TypeScript and React). You can check that everything is golden by running:
 
 ```BASH
-npm run pre-commit
+npm run whinge
 ```
 
-This is done in CI and will fail the build if it doesn't pass. The following pre-commit hook (`.git/hooks/pre-commit`) can be added locally to prevent commits that will break CI:
+### CI Checks
+
+Linting/formatting and tests are checked in CI and will fail the build if they don't pass. The following pre-commit hook (`.git/hooks/pre-commit`) can be added locally to prevent commits that will break CI:
 
 ```BASH
 #!/bin/sh
 
 export FORCE_COLOR=1
 
-echo "Checking code..."
+echo "linting and format check..."
 output=$(npm run whinge 2>&1)
+status=$?
+
+if [ $status -ne 0 ]; then
+	echo "$output"
+	exit $status;
+fi
+
+echo "testing..."
+output=$(npm run test 2>&1)
 status=$?
 
 if [ $status -ne 0 ]; then
@@ -29,7 +40,7 @@ if [ $status -ne 0 ]; then
 fi
 ```
 
-To skip the check in a commit (for a commit the will be squashed before being pushed for instance) use:
+To skip the pre-commit checks (for a commit the will be squashed before being pushed for instance) use:
 
 ```BASH
 git commit --no-verify
