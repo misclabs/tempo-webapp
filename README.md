@@ -21,19 +21,33 @@ Linting/formatting and tests are checked in CI and will fail the build if they d
 
 export FORCE_COLOR=1
 
-echo "linting and format check..."
-output=$(npm run whinge 2>&1)
+echo "format check..."
+output=$(npm run format:check 2>&1)
 status=$?
-
 if [ $status -ne 0 ]; then
 	echo "$output"
 	exit $status;
 fi
 
-echo "testing..."
+echo "linting..."
+output=$(npm run lint 2>&1)
+status=$?
+if [ $status -ne 0 ]; then
+	echo "$output"
+	exit $status;
+fi
+
+echo "typechecking..."
+output=$(npm run typecheck 2>&1)
+status=$?
+if [ $status -ne 0 ]; then
+	echo "$output"
+	exit $status;
+fi
+
+echo "running unit tests..."
 output=$(npm run test 2>&1)
 status=$?
-
 if [ $status -ne 0 ]; then
 	echo "$output"
 	exit $status;

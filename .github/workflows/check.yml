@@ -1,4 +1,4 @@
-name: Format checks, linting, and testing
+name: Check formating, lint rules, and types
 
 on:
   push:
@@ -15,7 +15,7 @@ env:
   BUILD_PATH: "."
 
 jobs:
-  build:
+  check:
     runs-on: ubuntu-latest
     steps:
       # checkout v6.0.2
@@ -43,10 +43,14 @@ jobs:
         run: npm ci
         working-directory: ${{ env.BUILD_PATH }}
 
-      - name: Format and linting
-        run: npm run whinge
+      - name: Format check
+        run: npm run format:check
         working-directory: ${{ env.BUILD_PATH }}
 
-      - name: Testing
+      - name: Linting
+        run: npm run lint
+        working-directory: ${{ env.BUILD_PATH }}
+
+      - name: Unit tests
         run: npm run test
         working-directory: ${{ env.BUILD_PATH }}
