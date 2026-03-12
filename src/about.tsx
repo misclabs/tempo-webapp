@@ -6,8 +6,7 @@ export function About(): ReactElement {
     <>
       <h1>About</h1>
       <div>
-        <Button>Solid</Button>
-        <Button type="secondary">Secondary</Button>
+        <Button>Primary</Button>
         <Button type="danger">Danger</Button>
       </div>
     </>
