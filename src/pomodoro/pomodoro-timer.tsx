@@ -10,7 +10,7 @@ import {
 import { PlayPauseButton } from "./play-pause-button";
 import { ActivityTypeControl } from "./activity-type-control";
 import { useActivityTimerEffect } from "./activity-timer";
-import TeButton from "../ui/te-button";
+import Button from "../ui/button";
 
 export function PomodoroTimer(): ReactElement {
   const [timerState, setTimerState] = useState("Ready" as TimerState);
@@ -65,7 +65,7 @@ export function PomodoroTimer(): ReactElement {
           timerState={timerState}
           setTimerState={setTimerState}
         />
-        <TeButton
+        <Button
           disabled={timerState === "Ready"}
           // variant="soft"
           // size="4"
@@ -77,7 +77,7 @@ export function PomodoroTimer(): ReactElement {
           }}
         >
           <StopIcon width="22" height="22" />
-        </TeButton>
+        </Button>
       </div>
     </div>
   );

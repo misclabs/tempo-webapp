@@ -2,7 +2,7 @@ import { PlayIcon, PauseIcon } from "@radix-ui/react-icons";
 import type { ReactElement } from "react";
 import { playClick } from "../sfx";
 import type { TimerState } from "./pomodoro";
-import TeButton from "../ui/te-button";
+import Button from "../ui/button";
 
 export type PlayPauseButtonProps = {
   timerState: TimerState;
@@ -22,35 +22,27 @@ export function PlayPauseButton({
   switch (timerState) {
     case "Ready":
       return (
-        <TeButton
-          aria-label="start"
-          onClick={() => onClick("Running")}
-          {...rest}
-        >
+        <Button aria-label="start" onClick={() => onClick("Running")} {...rest}>
           <PlayIcon width="22" height="22" />
-        </TeButton>
+        </Button>
       );
 
     case "Running":
       return (
-        <TeButton
-          aria-label="pause"
-          onClick={() => onClick("Paused")}
-          {...rest}
-        >
+        <Button aria-label="pause" onClick={() => onClick("Paused")} {...rest}>
           <PauseIcon width="22" height="22" />
-        </TeButton>
+        </Button>
       );
 
     case "Paused":
       return (
-        <TeButton
+        <Button
           aria-label="resume"
           onClick={() => onClick("Running")}
           {...rest}
         >
           <PlayIcon width="22" height="22" />
-        </TeButton>
+        </Button>
       );
   }
 }
