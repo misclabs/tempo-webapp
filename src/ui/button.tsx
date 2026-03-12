@@ -14,7 +14,6 @@ export default function Button({
   const classes = [
     "rounded",
     "px-3 py-2",
-    // "text-base",
     "font-semibold",
     "shadow-sm transition-shadow",
     "duration-200",
@@ -40,6 +39,7 @@ export default function Button({
       );
       break;
   }
+
   return (
     <button {...rest} className={classes.join(" ")} type="button">
       {children}
