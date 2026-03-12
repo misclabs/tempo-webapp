@@ -4,17 +4,20 @@ A timer for focus and daily practice.
 
 ## Dev Notes
 
-### Linting and Format
+[![Check formating, lint rules, and types](https://github.com/misclabs/tempo-webapp/actions/workflows/check.yml/badge.svg)](https://github.com/misclabs/tempo-webapp/actions/workflows/check.yml)
 
-Defaults are used for Prettier and ESLint (including plugins for TypeScript and React). You can check that everything is golden by running:
+### Checks run in CI
 
-```BASH
-npm run whinge
-```
+The following checks are run in CI:
 
-### CI Checks
+- Format with Prettier defaults (run locally with: `npm run format`)
+- Linting rules that are mostly default ESLint with TypeScript and React additions (run locally with: `npm run format`)
+- Type checks (run locally with: `npm run typecheck`)
+- Unit tests (run locally with: `npm run test`)
 
-Linting/formatting and tests are checked in CI and will fail the build if they don't pass. The following pre-commit hook (`.git/hooks/pre-commit`) can be added locally to prevent commits that will break CI:
+### Pre-commit
+
+The following pre-commit hook (`.git/hooks/pre-commit`) can be added locally to prevent commits that will break CI:
 
 ```BASH
 #!/bin/sh
