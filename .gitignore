@@ -1,7 +1,12 @@
-/node_modules
-/dist
 /local
 
+# Build
+/dist
+
+# Modules
+/node_modules
+
+# Logs
 logs
 *.log
 npm-debug.log*
@@ -11,3 +16,7 @@ pnpm-debug.log*
 .vscode/*
 !.vscode/extensions.json
 .DS_Store
+
+# Storybook
+*storybook.log
+storybook-static
