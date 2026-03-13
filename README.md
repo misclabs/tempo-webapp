@@ -1,10 +1,10 @@
-# tempo
+# Tempo
 
 A timer for focus and daily practice.
 
-## Dev Notes
-
 [![Check formating, lint rules, and types](https://github.com/misclabs/tempo-webapp/actions/workflows/check.yml/badge.svg)](https://github.com/misclabs/tempo-webapp/actions/workflows/check.yml)
+
+## Dev Notes
 
 ### Checks run in CI
 
