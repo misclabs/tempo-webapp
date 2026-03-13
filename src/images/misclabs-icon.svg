@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1.06236,0,0,1.06236,-9.17006,-10.4895)">
+        <ellipse cx="129.118" cy="130.36" rx="118.81" ry="119.215" style="fill:rgb(20,20,20);stroke:rgb(20,20,20);stroke-width:0.94px;"/>
+    </g>
+    <g id="Atom" transform="matrix(0.251844,0,0,0.251844,-7.99572,-7.99572)">
+        <g transform="matrix(1.66082,1.29566e-16,1.29566e-16,1.16703,-540.371,-43.3523)">
+            <g id="Electron">
+                <ellipse cx="650.506" cy="499.861" rx="110.506" ry="399.197" style="fill:none;stroke:rgb(233,110,253);stroke-width:31.35px;"/>
+            </g>
+        </g>
+        <g transform="matrix(-0.830409,-1.43831,1.01068,-0.583515,574.988,1767.31)">
+            <g id="Electron1" serif:id="Electron">
+                <ellipse cx="650.506" cy="499.861" rx="110.506" ry="399.197" style="fill:none;stroke:rgb(233,110,253);stroke-width:31.35px;"/>
+            </g>
+        </g>
+        <g transform="matrix(-0.830409,1.43831,-1.01068,-0.583515,1585.38,-103.953)">
+            <g id="Electron2" serif:id="Electron">
+                <ellipse cx="650.506" cy="499.861" rx="110.506" ry="399.197" style="fill:none;stroke:rgb(233,110,253);stroke-width:31.35px;"/>
+            </g>
+        </g>
+    </g>
+    <g transform="matrix(0.187523,0,0,0.177481,19.4967,22.7786)">
+        <path d="M578.614,150.568L663.721,257.263L787.917,209.824L811.132,347.186L941.138,371.714L896.239,502.937L997.221,592.859L896.239,682.782L941.138,814.005L811.132,838.533L787.917,975.895L663.721,928.455L578.614,1035.15L493.506,928.455L369.31,975.895L346.096,838.533L216.089,814.005L260.988,682.782L160.006,592.859L260.988,502.937L216.089,371.714L346.096,347.186L369.31,209.824L493.506,257.263L578.614,150.568Z" style="fill:rgb(20,20,20);stroke:rgb(233,110,253);stroke-width:58.42px;"/>
+    </g>
+    <g transform="matrix(11.1938,-8.81972e-16,8.81972e-16,11.1938,-13.3671,-296.268)">
+        <path d="M12.629,36.11C13.416,34.718 14.99,34.718 15.777,35.414C16.564,36.11 16.564,37.503 15.777,38.896C15.226,39.94 13.81,40.984 12.629,41.681C11.448,40.984 10.032,39.94 9.481,38.896C8.694,37.503 8.694,36.11 9.481,35.414C10.268,34.718 11.842,34.718 12.629,36.11Z" style="fill:rgb(103,168,254);"/>
+    </g>
+</svg>
