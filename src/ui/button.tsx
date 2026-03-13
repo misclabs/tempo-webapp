@@ -1,4 +1,8 @@
-import { type ReactNode, type MouseEventHandler } from "react";
+import {
+  type ReactNode,
+  type ReactElement,
+  type MouseEventHandler,
+} from "react";
 
 export type ButtonProps = {
   children: ReactNode;
@@ -10,7 +14,7 @@ export default function Button({
   children,
   type = "primary",
   ...rest
-}: ButtonProps) {
+}: ButtonProps): ReactElement {
   const classes = [
     "rounded",
     "px-3 py-2",

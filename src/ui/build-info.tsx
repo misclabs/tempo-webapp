@@ -1,6 +1,9 @@
-import { gitInfo } from "virtual:git-status";
+import type { ReactElement } from "react";
 
-export function BuildInfo() {
+interface BuildInfoProps {
+  gitInfo: GitStatusResult;
+}
+export default function BuildInfo({ gitInfo }: BuildInfoProps): ReactElement {
   return (
     <div
       id="build-info"
@@ -8,6 +11,7 @@ export function BuildInfo() {
       data-sha={gitInfo.sha}
       data-commit-date={gitInfo.commitDate}
       data-is-dirty={gitInfo.isDirty}
+      className="px-3 py-2 text-right"
     >
       {`${gitInfo.shortSha}`}
     </div>

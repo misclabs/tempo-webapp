@@ -1,5 +1,5 @@
 import { useState, type ReactElement } from "react";
-import { StopIcon } from "@radix-ui/react-icons";
+import { StopIcon } from "@heroicons/react/24/solid";
 import { playClick, playAlarm } from "../sfx";
 import {
   type TimerState,

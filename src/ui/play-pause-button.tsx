@@ -1,4 +1,5 @@
-import { PlayIcon, PauseIcon } from "@radix-ui/react-icons";
+// import { PlayIcon, PauseIcon } from "@radix-ui/react-icons";
+import { PauseIcon, PlayIcon } from "@heroicons/react/24/solid";
 import type { ReactElement } from "react";
 import Button from "../ui/button";
 
