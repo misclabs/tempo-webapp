@@ -15,7 +15,7 @@ const meta = {
   argTypes: {
     // backgroundColor: { control: "color" },
   },
-  args: { onValueChanged: fn() },
+  args: { setActivity: fn() },
 } satisfies Meta<typeof ActivityTypeControl>;
 export default meta;
 
@@ -23,23 +23,23 @@ type Story = StoryObj<typeof meta>;
 
 export const Work: Story = {
   args: {
-    value: "Work",
+    activity: "Work",
   },
 };
 export const WorkDisabled: Story = {
   args: {
-    value: "Work",
+    activity: "Work",
     disabled: true,
   },
 };
 
 export const ShortRest: Story = {
   args: {
-    value: "ShortRest",
+    activity: "ShortRest",
   },
 };
 export const LongRest: Story = {
   args: {
-    value: "LongRest",
+    activity: "LongRest",
   },
 };

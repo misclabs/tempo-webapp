@@ -1,6 +1,6 @@
 import type { ReactElement } from "react";
 import { getErrorMessage, type FallbackProps } from "react-error-boundary";
-import Button from "../ui/button";
+import TeButton from "../ui/button";
 
 export function Bluescreen({
   error,
@@ -16,7 +16,7 @@ export function Bluescreen({
       <section>
         <div>Error: {getErrorMessage(error)}</div>
       </section>
-      <Button onClick={resetErrorBoundary}>Restart</Button>
+      <TeButton onClick={resetErrorBoundary}>Restart</TeButton>
     </>
   );
 }

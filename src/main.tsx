@@ -5,7 +5,7 @@ import { ErrorBoundary } from "react-error-boundary";
 
 import "./main.css";
 import { Layout } from "./layout.tsx";
-import { About } from "./pages/about.tsx";
+import About from "./pages/about.tsx";
 import NotFoundPage from "./pages/404.tsx";
 import { PomodoroTimer } from "./pomodoro/pomodoro-timer.tsx";
 import { Bluescreen } from "./pages/bluescreen.tsx";
