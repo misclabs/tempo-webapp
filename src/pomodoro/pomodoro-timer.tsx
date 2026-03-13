@@ -8,7 +8,7 @@ import {
   formatDurationS,
 } from "./pomodoro";
 import { PlayPauseButton } from "./play-pause-button";
-import { ActivityTypeControl } from "./activity-type-control";
+import ActivityTypeControl from "../ui/activity-type-control";
 import { useActivityTimerEffect } from "./activity-timer";
 import Button from "../ui/button";
 
