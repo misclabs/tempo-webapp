@@ -20,18 +20,18 @@ window.addEventListener("vite:preloadError", (event) => {
 const root = document.getElementById("root")!;
 createRoot(root).render(
   <StrictMode>
-    {/* TODO(jw): <Theme accentColor="indigo" grayColor="slate"> */}
-    <ErrorBoundary FallbackComponent={Bluescreen}>
-      <BrowserRouter>
-        <Routes>
-          <Route element={<Layout />}>
-            <Route index element={<PomodoroTimer />} />
-            <Route path="/about" element={<About />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-      <BuildInfo />
-    </ErrorBoundary>
-    {/* </Theme> */}
+    <div className="bg-slate-50 text-slate-950">
+      <ErrorBoundary FallbackComponent={Bluescreen}>
+        <BrowserRouter>
+          <Routes>
+            <Route element={<Layout />}>
+              <Route index element={<PomodoroTimer />} />
+              <Route path="/about" element={<About />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+        <BuildInfo />
+      </ErrorBoundary>
+    </div>
   </StrictMode>,
 );
