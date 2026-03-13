@@ -4,7 +4,7 @@ import type { ActivityType } from "../pomodoro/pomodoro";
 // import { playClick } from "../sfx";
 
 interface ActivityTypeControlProps {
-  onValueChanged: (value: ActivityType) => void;
+  onValueChanged?: (value: ActivityType) => void;
   value: ActivityType;
   disabled?: boolean;
 }
@@ -25,6 +25,8 @@ export default function ActivityTypeControl({
       {...rest}
       type="single"
       onValueChange={(value: ActivityType) => {
+        if (!value || !onValueChanged) return;
+
         // playClick();
         onValueChanged(value);
       }}

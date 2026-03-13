@@ -15,7 +15,7 @@ const meta = {
   argTypes: {
     // backgroundColor: { control: "color" },
   },
-  args: { setIsPlaying: fn() },
+  args: { onValueChanged: fn() },
 } satisfies Meta<typeof ActivityTypeControl>;
 export default meta;
 

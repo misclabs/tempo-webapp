@@ -7,7 +7,7 @@ import {
   getActivityDurationS,
   formatDurationS,
 } from "./pomodoro";
-import { PlayPauseButton } from "./play-pause-button";
+import PlayPauseButton from "../ui/play-pause-button";
 import ActivityTypeControl from "../ui/activity-type-control";
 import { useActivityTimerEffect } from "./activity-timer";
 import Button from "../ui/button";
@@ -31,9 +31,18 @@ export function PomodoroTimer(): ReactElement {
     },
   );
 
+  function onSetIsPlaying(desiredIsPlaying: boolean) {
+    if (desiredIsPlaying) {
+      setTimerState("Running");
+    } else {
+      if (timerState === "Running") {
+        setTimerState("Paused");
+      }
+    }
+  }
+
   return (
-    <div>
-      {/* TODO(jw) direction="column" gap="5"> */}
+    <div className="flex flex-col items-center gap-5">
       <ActivityTypeControl
         disabled={timerState !== "Ready"}
         value={activityType}
@@ -42,33 +51,28 @@ export function PomodoroTimer(): ReactElement {
           setTargetDurationS(getActivityDurationS(value));
         }}
       />
-      <div>
-        {/* TODO(jw) flex gap="5" justify="center" align="end"> */}
-        <p
+      <div className="flex items-end justify-center gap-5">
+        <span
+          className="text-5xl font-medium"
           // align="center"
-          // size="9"
-          // weight="medium"
           style={{
             fontVariantNumeric: "tabular-nums",
           }}
         >
           {formatDurationS(elapsedS)}
-        </p>
-        <p>
-          {/* TODO(jw): text align="center" size="5" weight="light"> */}/{" "}
+        </span>
+        <span className="text-xl font-light">
+          {/* TODO(jw): text align="center"> */}/{" "}
           {formatDurationS(targetDurationS)}
-        </p>
+        </span>
       </div>
-      <div className="space-x-2">
-        {/* TODO(jw) flex justify="center" align="end" gap="5"> */}
+      <div className="space-x-3">
         <PlayPauseButton
-          timerState={timerState}
-          setTimerState={setTimerState}
+          isPlaying={timerState === "Running"}
+          setIsPlaying={onSetIsPlaying}
         />
         <Button
           disabled={timerState === "Ready"}
-          // variant="soft"
-          // size="4"
           aria-label="stop"
           onClick={() => {
             playClick();
@@ -76,7 +80,7 @@ export function PomodoroTimer(): ReactElement {
             setElapsedS(0);
           }}
         >
-          <StopIcon width="22" height="22" />
+          <StopIcon width="1.375rem" height="1.375rem" />
         </Button>
       </div>
     </div>
