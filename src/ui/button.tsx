@@ -15,7 +15,7 @@ export default function Button({
     "rounded",
     "px-3 py-2",
     "font-semibold",
-    "shadow-sm transition-shadow",
+    "shadow-sm shadow-slate-400 transition-shadow",
     "duration-200",
     "focus-visible:outline-2 focus-visible:outline-sky-300",
     "hover:shadow-md",

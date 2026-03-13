@@ -2,11 +2,11 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { fn } from "storybook/test";
 
 import "../main.css";
-import PlayPauseButton from "./play-pause-button";
+import ActivityTypeControl from "./activity-type-control";
 
 const meta = {
-  title: "Controls/PlayPauseButton",
-  component: PlayPauseButton,
+  title: "Controls/ActivityTypeControl",
+  component: ActivityTypeControl,
   parameters: {
     layout: "centered",
   },
@@ -16,30 +16,30 @@ const meta = {
     // backgroundColor: { control: "color" },
   },
   args: { setIsPlaying: fn() },
-} satisfies Meta<typeof PlayPauseButton>;
+} satisfies Meta<typeof ActivityTypeControl>;
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Paused: Story = {
+export const Work: Story = {
   args: {
-    isPlaying: false,
+    value: "Work",
   },
 };
-export const PausedDisabled: Story = {
+export const WorkDisabled: Story = {
   args: {
-    isPlaying: false,
+    value: "Work",
     disabled: true,
   },
 };
-export const Playing: Story = {
+
+export const ShortRest: Story = {
   args: {
-    isPlaying: true,
+    value: "ShortRest",
   },
 };
-export const PlayingDisabled: Story = {
+export const LongRest: Story = {
   args: {
-    isPlaying: true,
-    disabled: true,
+    value: "LongRest",
   },
 };
