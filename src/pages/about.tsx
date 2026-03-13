@@ -1,5 +1,5 @@
 import type { ReactElement } from "react";
-import Button from "./ui/button";
+import Button from "../ui/button";
 
 export function About(): ReactElement {
   return (

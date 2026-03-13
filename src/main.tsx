@@ -5,9 +5,9 @@ import { ErrorBoundary } from "react-error-boundary";
 
 import "./main.css";
 import { Layout } from "./layout.tsx";
-import { About } from "./about.tsx";
+import { About } from "./pages/about.tsx";
 import { PomodoroTimer } from "./pomodoro/pomodoro-timer.tsx";
-import { Bluescreen } from "./bluescreen.tsx";
+import { Bluescreen } from "./pages/bluescreen.tsx";
 import { BuildInfo } from "./build-info.tsx";
 
 window.addEventListener("vite:preloadError", (event) => {

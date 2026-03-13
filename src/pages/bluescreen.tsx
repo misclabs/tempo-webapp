@@ -1,6 +1,6 @@
 import type { ReactElement } from "react";
 import { getErrorMessage, type FallbackProps } from "react-error-boundary";
-import Button from "./ui/button";
+import Button from "../ui/button";
 
 export function Bluescreen({
   error,
