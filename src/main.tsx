@@ -5,10 +5,10 @@ import { ErrorBoundary } from "react-error-boundary";
 
 import "./main.css";
 import { Layout } from "./layout.tsx";
-import About from "./pages/about.tsx";
+import AboutPage from "./pages/about.tsx";
 import NotFoundPage from "./pages/404.tsx";
 import { PomodoroTimer } from "./pomodoro/pomodoro-timer.tsx";
-import { Bluescreen } from "./pages/bluescreen.tsx";
+import Bluescreen from "./pages/bluescreen.tsx";
 import BuildInfo from "./ui/build-info.tsx";
 import { gitInfo } from "virtual:git-status";
 
@@ -27,7 +27,7 @@ createRoot(root).render(
         <Routes>
           <Route element={<Layout />}>
             <Route index element={<PomodoroTimer />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/about" element={<AboutPage />} />
             <Route path="/404" element={<NotFoundPage />} />
           </Route>
         </Routes>

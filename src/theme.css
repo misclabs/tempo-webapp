@@ -1,0 +1,26 @@
+@theme inline {
+  /*
+
+  border
+  panel - panel background
+
+  accent
+  accent active
+  accent border
+
+  danger
+  */
+
+  --color-bgcol: var(--color-gray-50);
+  --color-txcol: var(--color-gray-700);
+  --color-accol: var(--color-blue-600);
+
+  --color-bgcol_dk: var(--color-gray-900);
+  --color-txcol_dk: var(--color-gray-200);
+  --color-accol: var(--color-blue-400);
+}
+
+/*
+Enable this to manually switch between dark mode
+@custom-variant dark (&:where(.dark, .dark *));
+*/
