@@ -13,6 +13,7 @@ concurrency:
 
 env:
   BUILD_PATH: "."
+  NODE_VERSION: "will be set in get-node-version"
 
 jobs:
   check:
